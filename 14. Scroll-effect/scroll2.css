@@ -1,0 +1,59 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section{
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+
+  height: 80vh;
+  width: 80vw;
+  margin: 20vh auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* start -> scroll akan otomatis diarahkan agar box elemen rata kiri / rata atas */
+  /* center -> scroll akan otomatis diarahkan agar box elemen tepat di tengah window user */
+  /* end -> scroll akan otomatis diarahkan agar box elemen rata kanan / rata bawah */
+  scroll-snap-align: center;
+}
+
+/* Cara di ini bisa saja dilakukan, namun tidak semua browser mendukung properti "scroll-snap-type" */
+/* .container{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+} */
+
+
+
+.satu{
+  background-color: lightblue;
+}
+.dua{
+  background-color: lightcoral;
+}
+.tiga{
+  background-color: lightsalmon;
+}
+.empat{
+  background-color: rgb(255, 255, 145);
+}
+.lima{
+  background-color: lightgreen;
+}
+
+
+/* Jika browser mendukung properti "scroll-snap-align: start", maka... */
+@supports (scroll-snap-align: start){
+  .container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+}

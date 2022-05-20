@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Position Absolute dan Fixed</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+        .container{
+            width: 600px;
+            height: 600px;
+            border: 5px solid rgb(10, 114, 109);
+            position: relative;     /* Baca pengertian position absolute. Karena container tidak 1 dimensi dengan elemen dua, maka samakan dimensinya */
+        }
+        .satu{
+            background-color: rgb(203, 203, 255);
+            position: fixed;
+            /* Position fixed selalu relatif terhadap windows, dan juga letaknya selalu terkunci meskipun halaman di scroll */
+            top: 0;
+            left: 0;
+        }
+        .dua{
+            background-color: rgb(250, 250, 141);
+            position: absolute;
+            /* 
+            Position absolute mengubah elemen html maju 1 dimensi yang memungkinkan penggeseran posisi elemen
+            relatif dari parentnya dengan syarat elemen parentnya 1 dimensi dengan elemen absolute. Di position absolute tempat asal 
+            tidak dianggap oleh HTML sehingga tempatnya diisi elemen lain.
+            */
+            top: 0;
+            left: 0;
+        }
+        .tiga{
+            background-color: lawngreen;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="satu"></div>
+        <div class="dua"></div>
+        <div class="tiga"></div>
+    </div>
+    
+</body>
+</html>

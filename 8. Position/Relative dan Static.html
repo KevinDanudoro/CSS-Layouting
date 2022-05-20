@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Position Relative dan Static</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        .satu{
+            background-color: rgb(203, 203, 255);
+        }
+        .dua{
+            background-color: rgb(250, 250, 141);
+            position: relative;     
+            /* 
+            Position relative mengubah elemen html maju 1 dimensi yang memungkinkan penggeseran posisi elemen
+            relatif dari tempat awalnya(tempat asal dianggap oleh HTML). Dengan menggunakan position, elemen lain tidak akan 
+            terpengaruh akibat perpindahan elemen tsb.
+            */
+
+            top: 30px;
+            left: 50px;
+        }
+        .tiga{
+            background-color: lawngreen;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="satu"></div>
+    <div class="dua"></div>
+    <div class="tiga"></div>
+    
+</body>
+</html>

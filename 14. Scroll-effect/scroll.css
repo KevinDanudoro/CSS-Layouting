@@ -1,0 +1,54 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  scroll-snap-align: start;
+}
+
+.container{
+  /* scroll-snap-type: y mandatory; -> "y" berarti mengatur scroll effect pada y axis*/
+  /* Sedangkan mandatory berarti lakukan scroll efect setelah melakukan sedikit pergerakan scroll */
+  /* mandatory dapat diganti proximity */
+  scroll-snap-type: y mandatory;
+
+  /* 
+  Container hanya memiliki tinggi 100vh sedangkan isi elemen di dalamnya 100vh * 5,
+  oleh sebab itu pasti terjadi overflowY. Untuk mengatur efek overflow menjadi scroll,
+  maka beri nilai overflow-y: scroll;
+  */
+  overflow-y: scroll;
+
+  /* Tinggi container untuk melihat isi elemen di dalamnya menggunakan scroll overflow*/
+  height: 100vh;
+}
+
+.satu{
+  background-color: lightblue;
+}
+.dua{
+  background-color: lightcoral;
+}
+.tiga{
+  background-color: lightsalmon;
+}
+.empat{
+  background-color: rgb(255, 255, 145);
+}
+.lima{
+  background-color: lightgreen;
+}
+

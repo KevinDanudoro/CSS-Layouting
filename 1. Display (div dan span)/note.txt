@@ -1,0 +1,30 @@
+Display
+
+Pada CSS terdapat beberapa jenis display yang dimiliki oleh tiap2 tag, yaitu:
+1. Inline
+2. Inline-Block
+3. Block
+4. None
+
+Penjelasan Inline:
+1. Tag pada HTML yang secara default tidak menambahkan baris baru ketika dibuat (contoh tag a)
+2. Lebar dan tinggi elemennya sesuai dengan konten di dalamnya 
+3. User tidak dapat mengatur tinggi dan lebar dari elemen Inline
+4. Margin dan paddingnya hanya mempengaruhi elemen secara horizontal, tidak secara vertikal
+
+Namun terdapat pengecualian pada tag img yang mana merupakan elemen inline namun kita dapat atur
+tinggi(height) dan lebarnya(width).
+
+
+Penjelasan Inline-Block:
+1. Tidak ada elemen secara default yang memiliki properti display Inline-Block
+2. Harus diubah secara manual oleh user
+3. Perilaku dasarnya hampir sama dengan elemen Inline
+4. Perbedaanya adalah elemen Inline-Block dapat kita atur tinggi dan lebarnya
+
+
+Penjelasan Block:
+1. Tag pada HTML yang secara default menambahkan baris baru ketika dibuat (contoh tag h, p, li)
+2. Jika tidak diatur lebarnya, maka lebar defaultnya akan memenuhi lebar dari browser/parentnya
+3. User dapat mengatur tinggi dan lebar dari elemen block
+4. Di dalam elemen blok, user dapat menyimpan tag dengan properti display inline, inline-block, atau block

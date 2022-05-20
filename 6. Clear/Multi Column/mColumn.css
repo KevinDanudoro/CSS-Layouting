@@ -1,0 +1,51 @@
+.container{
+    width: 600px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+}
+.kolom1, .kolom2, .kolom3{
+    float: left;
+}
+.kolom1{
+    width: 300px;
+    height: 100px;
+    background-color: lightblue;
+    float: right;
+}
+.kolom2{
+    width: 200px;
+    height: 100px;
+    background-color: orange;
+}
+.kolom3{
+    width: 100px;
+    height: 100px;
+    background-color: lavender;
+}
+
+/* Karena di atas ada yang floatnya right, maka gunakan clear: both*/
+
+
+/* .clear{
+    clear: both;
+} */
+
+
+/* Cara 3: Paling Baik digunakan Micro Clearfix*/
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Tambahkan class cf pada div yang mengandung elemen float */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}

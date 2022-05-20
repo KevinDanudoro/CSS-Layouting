@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Position Lanjutan CSS Layouting</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        .kotak{
+            background-color: black;
+            opacity: 70%;
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            right: 100px;
+            bottom: 100px;
+        }
+        .close{
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            border: 3px solid black;
+            border-radius: 50%;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+        }
+        .close a{
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            line-height: 30px;
+            position: relative;
+            margin: 0;
+            left: 10px;
+            text-decoration: none;
+        }
+        .close a:hover{
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+            left: 9px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="kotak" id="kotak">
+        <div class="close"><a href="#close" onclick="tutup()">X</a></div>
+    </div>
+    
+    <h1>Hello World!</h1>
+    <h2>Selamat Datang Di Halaman Webiste</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eaque recusandae reiciendis, quisquam 
+        provident similique sunt facilis. Id blanditiis unde velit corrupti repellat iure distinctio ipsa. 
+        Ea laudantium suscipit quibusdam libero vero iure corporis sunt illum natus modi quia, nam quam 
+        aspernatur asperiores. Aspernatur eligendi delectus iste ex necessitatibus laudantium?
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum fuga nemo cumque officiis doloribus, 
+        nostrum corporis error! Incidunt magnam sit omnis id. Voluptates, dolorem porro sit corporis fugiat 
+        blanditiis distinctio aliquid quo nam atque, inventore et? Minus ducimus voluptatum reprehenderit 
+        nam impedit quod reiciendis culpa sunt ullam laborum dolores, debitis inventore nesciunt tempora 
+        ipsum quidem illo veritatis consectetur ipsa et repellat provident? Quis beatae tempore alias, culpa 
+        enim quibusdam velit facere error temporibus minus fugiat voluptatum officiis! Iure, quidem cum. Nemo 
+        alias explicabo assumenda est rerum expedita dolor aut placeat obcaecati, inventore dolore veritatis hic. 
+        Distinctio accusantium sit amet dolores!
+    </p>
+
+    <script>
+        function tutup() {
+          document.getElementById("kotak").style.display = "none";
+        }
+    </script>
+    
+</body>
+</html>

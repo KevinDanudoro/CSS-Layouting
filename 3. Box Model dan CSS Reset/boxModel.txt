@@ -1,0 +1,12 @@
+CSS Box Model terdiri dari margin, border, padding, dan content
+1. Margin adalah area transparan di luar border
+2. Border adalah garis/kotak pembatas antara margin dan padding
+3. padding adalah area transparan di dalam border
+4. Content adalah isi yang ingin ditampilkan di dalam border
+
+Macam2 properti pada margin, border, dan padding:
+margin-top          padding-top         border-top
+margin-right        padding-right       border-right
+margin-bottom       padding-bottom      border-bottom
+margin-left         padding-left        border-left
+

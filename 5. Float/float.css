@@ -1,0 +1,60 @@
+.container{
+    width: 600px;
+    height: 550px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+}
+
+.container img{
+    float: left;
+    /* 
+    Dengan menggunakan float maka, objek akan dianggap keluar dari
+    flow/aliran elemen (hampir tidak dianggap).
+    
+    Ada 2 tipe float: (left, right)
+    left => memaksa objek di sebelah kanan parent
+    right => memaksa objek di sebelah kiri parent
+    */
+
+    width: 300px;
+    margin-right: 20px;
+}
+p{
+    margin: 0px 10px;
+    text-align: justify;
+}
+
+/* ===================================== */
+
+.kotak{
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    line-height: 80px;   /* Trik membuat tulisan di tengah secara vertikal */
+    text-align: center;
+    font-size: 30px;
+    margin: 2px;
+    float: right;
+}
+
+/* ====================================== */
+.kolom1, .kolom2, .kolom3{
+    float: left;
+    margin-bottom: 30px;
+}
+.kolom1{
+    width: 300px;
+    height: 100px;
+    background-color: lightblue;
+}
+.kolom2{
+    width: 200px;
+    height: 100px;
+    background-color: orange;
+}
+.kolom3{
+    width: 100px;
+    height: 100px;
+    background-color: lavender;
+}

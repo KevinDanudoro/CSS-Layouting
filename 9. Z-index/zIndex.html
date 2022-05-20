@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Latihan Z-Index</title>
+    <style>
+        /* Zindex berfungsi mengatur tumpukan yang disebabkan elemen non-static */
+        /* Semakin besar z-index, semakin di depan pula letak elemennya */
+        /* Secara default, z-index masing2 elemen bernilai 0 */
+
+        div{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            position: absolute;
+        }
+        .satu{
+            background-color: salmon;
+            z-index: 3;
+        }
+        .dua{
+            background-color: lightgreen;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+        }
+        .tiga{
+            background-color: royalblue;
+            top: 200px;
+            left: 200px;
+            z-index: 1;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="satu"></div>
+    <div class="dua"></div>
+    <div class="tiga"></div>
+    
+</body>
+</html>

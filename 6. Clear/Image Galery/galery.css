@@ -1,0 +1,47 @@
+.container{
+    width: 600px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+}
+
+.kotak{
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    line-height: 80px;   /* Trik membuat tulisan di tengah secara vertikal */
+    text-align: center;
+    font-size: 30px;
+    margin: 2px;
+    float: right;
+}
+p{
+    text-align: justify;
+}
+
+/* Cara 1: Tidak bisa digunakan */
+
+
+/* Cara 2 */
+.clear{
+    clear: right;
+}
+
+
+/* Cara 3: Paling Baik digunakan Micro Clearfix */
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Tambahkan class cf pada div yang mengandung elemen float */
+/* Namun pada kasus ini tidak bisa digunakan karena tulisan ingin di bawah elemen float */
+/* .cf:before,
+.cf:after {
+    content: " "; 
+    display: table; 
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+} */

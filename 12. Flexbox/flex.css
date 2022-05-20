@@ -1,0 +1,250 @@
+/* 
+https://flexboxfroggy.com/#id
+Link latihan flex-box
+*/
+
+.container {
+  max-width: 600px;
+  height: 200px;
+  border: 5px solid gray;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+
+
+  /* display diletakkan di parent dari elemen yang ingin di atur */
+  display: flex;
+
+
+
+  /* flex-direction => Mengatur urutan flex */
+  /* 
+  row             = (default) urut dari kiri
+  row-reverse     = urut dari kanan
+  collumn         = urut dari atas
+  collumn-reverse = urut dari bawah
+  */
+  flex-direction: row;
+
+
+
+  /* flex-wrap => Mengatur tampilan saat parent penuh  */
+  /* 
+  nowrap = (default) tidak ada aksi
+  wrap = lanjut di baris bawahnya
+  wrap-reverse = kebalikan wrap urutannya
+  */
+  flex-wrap: nowrap;
+
+
+
+  /* justify-content => Mengatur letak child dalam parent (sumbu horizontal) */
+  /* 
+  flex-start = (default) rata kiri
+  flex-end = rata kanan
+  center = rata tengah
+  space-between = membagi jarak antar child sama rata
+  space-evenly = membagi jarak antar child sama rata bahkan dengan sisi window
+  space-around = membagi jarak layaknya memberi padding pada child
+  */
+  justify-content: flex-start;
+
+
+  /* align-items => Mengatur letak child dalam parent (sumbu vertikal) */
+  /* 
+  flex-start = rata atas
+  flex-end = rata bawah
+  center = rata tengah 
+  stretch = memebuhi height parentnya dengan syarat height pada child tidak diberikan
+  baseline = menyejajarkan karakter(huruf/angka) dalam child agar dalam 1 garis lurus
+  */
+  align-items: flex-start;
+
+
+  /* align-content => Mengatur letak child bila lebih dari 1 baris */
+  /* 
+  Memiliki parameter dan fungsi yg sama pada justify-content
+  */
+  align-content: flex-start;
+}
+
+.container div{
+  width: 100px;
+  /* height: 100px; */
+  background-color: rgb(125, 125, 255);
+  margin: 2px;
+
+}
+
+
+  /* flex untuk child */
+
+/* order => mengatur urutan child */
+/* 
+.satu{
+  order: 1;
+}
+.dua{
+  order: 3;
+}
+.tiga{
+  order: 4;
+}
+.empat{
+  order: 2;
+} 
+*/
+
+/* flex-grow => mengatur ukuran width tiap child  */
+/* 2 berarti lebih besar 2x dari child lainnya */
+/* Jika tidak menggunakan [align-items] dan [height pada elemen child] maka height child akan memenuhi parentnya (mirip align-items: stretch;) */
+/* 
+.satu{
+  flex-grow: 1;
+}
+.dua{
+  flex-grow: 2;
+}
+.tiga{
+  flex-grow: 2;
+}
+.empat{
+  flex-grow: 1;
+}   
+*/
+
+
+
+/* align-self => mengatur letak child tertentu(1 elemen) secara vertikal */
+/* 
+Memiliki parameter dan fungsi yg serupa
+
+flex-start
+flex-end
+center
+baseline
+stretch
+*/
+/* 
+.empat{
+  align-self: center;
+} 
+*/
+
+
+/* Latihan 1 */
+html, body{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+  line-height: 1.65;
+  height: 2000px;
+}
+
+.container-satu{
+  display: flex;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+}
+.sidebar-satu{
+  flex: 1;
+  order: 1;
+}
+.kolom-utama{
+  flex: 2;
+  order: 2;
+}
+.sidebar-dua{
+  flex: 1;
+  order: 3;
+}
+
+
+/* Latihan 2 */
+.container-dua{
+  max-width: 800px;
+  margin: 50px auto;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+}
+.layanan{
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.layanan.satu{
+  background-color: rgb(120, 120, 255);
+}
+.layanan.dua{
+  background-color: rgb(0, 207, 0);
+}
+.layanan.tiga{
+  background-color: rgb(247, 86, 86);
+}
+
+
+
+/* Latihan 3 */
+.container-tiga{
+  max-width: 800px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.card{
+  width: 30%;
+  border: 2px solid gray;
+  background-color: white;
+  border-radius: 20px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+.card .header{
+  height: 150px;
+  background-color: gray;
+
+}
+.card .content{
+  text-align: center;
+  padding-bottom: 20px;
+}
+.card.besar{
+  transform: scale(1.1);
+}
+
+
+/* saat screen berukuran <= 700px */
+@media screen and (max-width: 700px) {
+  .container-dua{
+    flex-direction: column;
+  }
+  .layanan{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .container-tiga{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card{
+    min-width: 200px;
+    margin-bottom: 50px;
+    order: 2;
+  }
+  .card.besar{
+    margin-bottom: 70px;
+    order: 1;
+    transform: scale(1.2);
+  }
+}

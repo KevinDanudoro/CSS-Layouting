@@ -1,0 +1,53 @@
+.container{
+    width: 600px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+}
+
+.container img{
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+}
+p{
+    margin: 0px 10px;
+    text-align: justify;
+}
+/* 
+Karena gambar float tidak dianggap oleh .container, maka
+diperlukan sintaks tertentu untuk mengatasinya:
+1. overflow: auto;
+2. clear: left/right/both;
+3. micro clearfix
+*/
+
+/* contoh 1 */
+/* .container{
+    overflow: auto;
+} */
+
+
+/* contoh 2: Buat div kosong setelah penulisan teks jika ingin teks mengelilingi elemen float  */
+/* .clear{
+    clear: left;
+} */
+
+
+/* Cara 3: Paling Baik digunakan Micro Clearfix*/
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Tambahkan class cf pada div yang mengandung elemen float, bukan div yang termasuk float*/
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
